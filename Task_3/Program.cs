@@ -7,15 +7,25 @@
 
 Console.Clear();
 
-int num, cube;
+int num, cube, multi;
 
-cube = 1;
+cube = 0;
+multi = 1;
 
 Console.Write("Введите число: ");
 num = Convert.ToInt32(Console.ReadLine());
 
-while (cube < num + 1)
+Console.Write("Ряд кубов: ");
+
+while (multi < num)
 {
-  cube * cube;
-  Console.Write()
+  cube = multi * multi * multi;
+  Console.Write($"{cube}, ");
+  multi++;
+  
+  if (multi == num)
+  {
+    cube = multi * multi * multi;
+    Console.Write(cube);
+  }
 }
